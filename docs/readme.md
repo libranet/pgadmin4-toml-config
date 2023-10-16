@@ -24,21 +24,7 @@ Or add to your poetry-based project:
 
 ## Usage
 
-The only thing left to do for you is the create a ``.env`` in the root of your project.
-
-
-## Registered sitecustomize-entrypoint
-
-The ``autoread_dotenv.entrypoint``-function is registered as a ``sitecustomize``-entrypoint in our pyproject.toml_:
-
-``` toml
-    [tool.poetry.plugins]
-    [tool.poetry.plugins."sitecustomize"]
-    autoread_dotenv = "autoread_dotenv:entrypoint"
-```
-
-Sitecustomize and all its registered entrypoints will be executed at the start of *every* python-process.
-For more information, please see [sitecustomize-entrypoints](http://pypi.python.org/pypi/sitecustomize-entrypoints)
+Todo.
 
 
 ## Compatibility
@@ -48,8 +34,3 @@ For more information, please see [sitecustomize-entrypoints](http://pypi.python.
 
 ``pgadmin4-toml-config``  works on Python 3.8+, including PyPy3. Tested until Python 3.11,
 
-
-## Notable dependencies
-
-- [sitecustomize-entrypoints](http://pypi.python.org/pypi/sitecustomize-entrypoints)
-- [python-dotenv](http://pypi.python.org/pypi/python-dotenv)
