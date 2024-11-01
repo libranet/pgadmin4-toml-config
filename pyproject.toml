@@ -35,9 +35,9 @@ skips = ["*/test_*.py"]
 
 
 [tool.black]
+include = '\.py$'  # regex -> single-quotes
 line-length = 120
-target_version = ["py310"]
-include = '\.py$'          # regex -> single-quotes
+target-version = ["py312"]
 
 
 [tool.coverage.html]
@@ -136,18 +136,6 @@ packages = [{ include = "config_local", from = "src" }]
 python = ">=3.8.0"
 dynaconf = ">=3.2.3"
 
-[tool.poetry.group.dev.dependencies]
-black = { version = ">=22.1", allow-prereleases = true }
-flake8 = ">=4.0"
-flake8-bugbear = ">=23.2"
-flake8-docstrings = ">=1.6"
-flake8-pyproject = ">=1.2"
-flake8-rst-docstrings = ">=0.2"
-isort = ">=5.10"
-pre-commit = ">=2.14"
-pre-commit-hooks = ">=4.1"
-pylint = ">=2.12"
-ruff = ">=0.0"
 
 [tool.poetry.group.dist.dependencies]
 pyroma = ">=4.2"
@@ -165,6 +153,19 @@ sphinx-rtd-theme = ">=1.0"
 [tool.poetry.group.ipython.dependencies]
 ipdb = ">=0.13"
 ipython = ">=8.4"
+
+[tool.poetry.group.lint.dependencies]
+black = ">=22.1"
+flake8 = ">=4.0"
+flake8-bugbear = ">=23.2"
+flake8-docstrings = ">=1.6"
+flake8-pyproject = ">=1.2"
+flake8-rst-docstrings = ">=0.2"
+isort = ">=5.10"
+pre-commit = ">=2.14"
+pre-commit-hooks = ">=4.1"
+pylint = ">=2.12"
+ruff = ">=0.0"
 
 [tool.poetry.group.profiling.dependencies]
 importtime-waterfall = ">=1.0"
